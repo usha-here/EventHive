@@ -15,7 +15,7 @@ const io = new Server(server, {
   "http://localhost:5173",
   "http://localhost:5174",
   "https://event-hive-bice-one.vercel.app",
-  "https://event-hive-axsz1nnwi-vikash380771s-projects.vercel.app"
+  "https://event-hive-hzkxklifh-vikash380771s-projects.vercel.app"
 ],
  // Frontend and Organizer ports
         methods: ["GET", "POST", "PUT", "DELETE"]
@@ -28,7 +28,7 @@ app.use(cors({
     "http://localhost:5173",
     "http://localhost:5174",
     "https://event-hive-bice-one.vercel.app",
-    "https://event-hive-axsz1nnwi-vikash380771s-projects.vercel.app"
+    "https://event-hive-hzkxklifh-vikash380771s-projects.vercel.app"
   ],
   credentials: true
 }));
@@ -58,4 +58,5 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
 
