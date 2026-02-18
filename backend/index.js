@@ -11,13 +11,28 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:5173", "http://localhost:5174"], // Frontend and Organizer ports
+        origin: [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://event-hive-bice-one.vercel.app",
+  "https://event-hive-axsz1nnwi-vikash380771s-projects.vercel.app"
+],
+ // Frontend and Organizer ports
         methods: ["GET", "POST", "PUT", "DELETE"]
     }
 });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://event-hive-bice-one.vercel.app",
+    "https://event-hive-axsz1nnwi-vikash380771s-projects.vercel.app"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Database Connection
@@ -43,3 +58,4 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
