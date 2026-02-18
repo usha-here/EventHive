@@ -2,6 +2,9 @@
 
 EventHive is a full-stack event management platform that allows users to discover, register for, and organize events. It features real-time updates using Socket.io and a modern, responsive UI built with React and Tailwind CSS.
 
+Deployed: https://event-hive-bice-one.vercel.app/
+
+
  Features
 
 - **User Authentication**: Secure Login and Signup system with Role-based access (User/Organizer).
@@ -94,5 +97,6 @@ cd frontend
 npm run dev
 ```
 The application will be available at `http://localhost:5173`.
+
 
 
