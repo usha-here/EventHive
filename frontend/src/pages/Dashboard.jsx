@@ -12,7 +12,7 @@ const Dashboard = () => {
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
-        const newSocket = io(import.meta.env.VITE_API_URL.replace('/api', ''));
+        const socket = io(import.meta.env.VITE_API_URL.replace('/api', ''));
         setSocket(newSocket);
         fetchEvents();
 
@@ -162,4 +162,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
 
